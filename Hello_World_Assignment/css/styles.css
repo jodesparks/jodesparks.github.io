@@ -1,0 +1,12 @@
+h1 {
+    color:maroon
+}
+
+#first {
+    color:white
+}
+
+#third {
+    background-image: linear-gradient(to left, violet, indigo, blue, green,  rgb(197, 197, 47), orange, red);   -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
