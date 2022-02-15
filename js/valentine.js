@@ -7,7 +7,7 @@ function setup() {
     
       
     // Set background color
-    background('white');
+    background('pink');
       
     var div = createDiv('').size(windowWidth, windowHeight);
       
