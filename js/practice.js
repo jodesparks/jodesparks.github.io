@@ -76,5 +76,4 @@ function dateTime(){
 function magic(){
     var rabbit = document.getElementById('rabbit');
     rabbit.style.display = "none";
-
 }
