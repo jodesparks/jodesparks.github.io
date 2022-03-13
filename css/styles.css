@@ -1,12 +1,7 @@
-/*Task 7*/
 body {
-    background-color:rgb(196, 243, 255)
+    background-color:rgb(255, 209, 209);
 }
 
-/*Task 10
-@media (max-width: 960px) {
-    .col-md {
-        text-align: justify;
-    }
+body {
+    font-family:Georgia, 'Times New Roman', Times, serif
 }
-*/

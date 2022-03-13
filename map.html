@@ -1,0 +1,54 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/map.css">
+    <title>Fountain of Time</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+</head>
+
+<!--Navigation bar-->
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<div id="nav-placeholder">
+
+</div>
+<script>
+$(function(){
+  $("#nav-placeholder").load("nav.html");
+});
+</script>
+<!--end of Navigation bar-->
+<link rel="stylesheet" href="css/styles.css">
+
+<!--Begin Map element-->
+<body onload="mapLoad()">
+
+    <div class="container mt-3 text-center">
+        <h1>My Favorite Statue Near Campus</h1>
+        <div id="map"></div>
+    </div>
+    <script src="js/map.js"></script>
+
+<!--Begin image rows-->
+<div class="mt-0">
+      <img class="img-fluid" src="images/Fountain of Time/DSC_0543.JPG">
+      <img class="img-fluid" src="images/Fountain of Time/DSC_0484.JPG">
+      <img class="img-fluid" src="images/Fountain of Time/DSC_0506.JPG">
+      <img class="img-fluid" src="images/Fountain of Time/DSC_0531.JPG">
+  
+  </div>
+  </div>
+</div>
+
+</body>
+
+
+</html>
