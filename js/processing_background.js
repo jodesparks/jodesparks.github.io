@@ -1,7 +1,8 @@
 var hue;
 
 function setup() {
-      hue = 30
+    hue = 0
+    background_hue = 180
     // Create canvas of given size
     var cnv = createCanvas(windowWidth, windowHeight);
     cnv.style('display', 'block');
@@ -23,12 +24,23 @@ function heart(x, y, size) {
   }
   
   function draw() {
-    hue+=0.5;
-        noStroke();
+   
+    noStroke();
     colorMode(HSB, 360);
-      fill(hue, 155 , 360, ((hue/360) * 255) + 50);
-      background(hue-180, 155, 360)
+    hue+=0.5;
+    background_hue += 0.5;
+      if (hue == 360) {
+        hue = 0;
+        }
+        if (background_hue > 360) {
+          background_hue = 0;
+          print("switch")
+        }
+      
+      fill(hue, 155 , 360);
+      background(background_hue, 155, 360)
       circle(mouseX, mouseY, 150);
+      print(hue, background_hue)
     }
     
 
