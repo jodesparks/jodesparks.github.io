@@ -9,20 +9,77 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="js/practice.js"></script>   
     <title>Home</title>
-  </head>
 
-<!--Navigation bar-->
-<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
-<div id="nav-placeholder">
 
+    <!--AnyChart Scripts-->
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-core.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-graph.min.js"></script>
+    <script src="https://cdn.anychart.com/releases/8.8.0/js/anychart-data-adapter.min.js"></script>
+
+    <!--Navigation bar-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <div id="nav-placeholder">
+
+    </div>
+
+    <script>
+    $(function(){
+      $("#nav-placeholder").load("nav.html");
+    });
+    </script>
+    <!--end of Navigation bar-->
+
+    <style>
+      html, body, #container {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+</head>
+
+<body>
+<!--Begin Tweets-->
+<div class="" id="thesisSample">
+  <div class="p-5">
+  <h3>The Twitter YIMBY comes from a variety of political backgrounds. As seen below, in the case of Adam Zivo, one of these backgrounds is an "eclectic" set of politics. Zivo is an opinion writer for <thead></thead>
+  conservative paper National Post. Despite his conservative background, Zivo is a self-identified YIMBY: he goes so far as to identify as such while embedded in Ukraine covering the Russian invasion.</h3>
+  </div>
+
+<div class="d-flex justify-content-center">
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The YIMBY in me, as we pass through the suburbs of Lviv, Ukraine: “Look at all these triplexes.”</p>&mdash; Adam Zivo (@ZivoAdam) <a href="https://twitter.com/ZivoAdam/status/1501850236536324097?ref_src=twsrc%5Etfw">March 10, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 
-<script>
-$(function(){
-  $("#nav-placeholder").load("nav.html");
-});
-</script>
-<!--end of Navigation bar-->
+<div class="p-5">
+  <h3>Opposition to YIMBYism also stems from a variety of political backgrounds. See below for a tweet from a socialist Twitter user who disparages the notion of a socialist YIMBY:</h3>
+  </div>
 
-<!--Begin Tweets-->
-<blockquote class="twitter-tweet"><p lang="en" dir="ltr">The YIMBY in me, as we pass through the suburbs of Lviv, Ukraine: “Look at all these triplexes.”</p>&mdash; Adam Zivo (@ZivoAdam) <a href="https://twitter.com/ZivoAdam/status/1501850236536324097?ref_src=twsrc%5Etfw">March 10, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+<div class="d-flex justify-content-center">
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">being a socialist who is also a yimby is like being a vegetarian who also eats meat. you can’t be a socialist that believes the free market will solve our housing crisis.</p>&mdash; kurtis (@kurtiswu) <a href="https://twitter.com/kurtiswu/status/1488167009187631105?ref_src=twsrc%5Etfw">January 31, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  </div>
+</div>
+
+<div class="p-5">
+  <h3>See below for a network graph of the Twitter users that I have studied. [Note: below graph is a stand-in for actual data. Graph code sourced from: https://www.anychart.com/blog/2020/07/22/network-graph-javascript/]</h3>
+  </div>
+
+<!--Begin Example Nodes-->
+<div style="width:80%; height:100%;" id="graph"></div>
+
+<script> anychart.data.loadJsonFile('https://static.anychart.com/git-storage/word-press/data/network-graph-tutorial/data.json', function (data) {
+  // create a chart from the loaded data
+var chart = anychart.graph(data);
+
+// set the title
+chart.title("Network Graph showing the battles in Game of Thrones");
+
+// draw the chart
+chart.container("graph").draw();
+})
+</script>
+
+</body>
+</html>

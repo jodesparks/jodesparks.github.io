@@ -1,0 +1,2 @@
+nodes: [{ "id": "Lannister" }]
+edges: [{ "from": "Lannister", "to": "Tully" }]
