@@ -1,7 +1,19 @@
 body {
-    background-color:rgb(235, 198, 198);
+    background-color:rgb(0, 0, 0);
 }
 
 body {
     font-family:Georgia, 'Times New Roman', Times, serif
+}
+
+a, h1 {
+    color: white
+}
+
+a, div, h1 {
+    border-style: solid;
+    border-width: 10px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-color: white;
 }
